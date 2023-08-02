@@ -1,31 +1,27 @@
+# React + TypeScript + Vite
 
-# Backoffice IJJ
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-O Backoffice da Loja Jogajunto é uma ferramenta de gerenciamento que oferece controle total sobre a loja virtual. Possui cadastro fácil de produtos, filtros de pesquisa, cadastro de usuários e um painel de login seguro.
+Currently, two official plugins are available:
 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### Painel de produtos
+## Expanding the ESLint configuration
 
-![App Screenshot](https://cdn.discordapp.com/attachments/566850308702208001/1135640875658121256/jogajunto123.png)
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## Bugs
+- Configure the top-level `parserOptions` property like this:
 
-###### Filtro - searchbar não funciona
-###### Filtro - preço não funciona
-###### Painel de cadastro - não aceita virgula ex: 59,90 (não da pra enviar o produto)
-###### Painel de cadastro - Upload de img (padrão 5mb) aceitando até 20mb
-###### Funcionalidade - Da pra adicionar produto mas não tem como remover
+```js
+   parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+   },
+```
 
-### Stack utilizada
-
-**Front-end:** React, Axios, Radix, mui, Styled-component, zod
-
-**Back-end:** Node, Express, nodemon, multer, jsonwebtoken, bcrypt, cors
-
-
-## Funcionalidades
-
-- Login / cadastro de usuários
-- Cadastro de produtos
-- Filtro de pesquisa
-
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
