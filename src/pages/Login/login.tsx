@@ -4,7 +4,7 @@ import { Container } from "./styles";
 export const Home = () => {
   return (
     <Container>
-      <img src={"../../../public/loginBanner.png"} alt="LoginImage" />
+      <img src={"/loginBanner.png"} alt="LoginImage" />
       <Login />
     </Container>
   );

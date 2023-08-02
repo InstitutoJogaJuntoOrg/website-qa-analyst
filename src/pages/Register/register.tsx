@@ -10,14 +10,14 @@ export const Register = () => {
         <h1 className="desktopImage">Cadastre um produto</h1>
         <img
           className="desktopImage"
-          src="../../../public/products.png"
+          src="/products.png"
           alt=""
         />
       </ImageRegister>
       <div className="mobile">
         <img
           className="mobileImage"
-          src="../../../public/registerMobileBanner.png"
+          src="/registerMobileBanner.png"
           alt=""
         />
       </div>
