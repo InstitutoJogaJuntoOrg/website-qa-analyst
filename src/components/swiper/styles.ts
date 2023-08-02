@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 export const ImgOne = styled.div`
   background-image: url("https://cdn.discordapp.com/attachments/369610381024559132/1134648792193433650/Layer_2.png");
