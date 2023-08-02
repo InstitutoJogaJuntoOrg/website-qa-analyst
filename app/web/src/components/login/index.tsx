@@ -89,7 +89,7 @@ export const Login = () => {
       .catch((error) => {
         if (error.response) {
           switch (error.response.status) {
-            case 401:
+            case 409:
               toast.error(error.response.data.msg);
           }
         }
