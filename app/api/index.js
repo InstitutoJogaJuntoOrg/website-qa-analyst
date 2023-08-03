@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import useRoutes from "./routes/products.js";
 
+const PORT = process.env.PORT || 3301 
+
 const app = express();
 
 app.use(express.json());
@@ -18,5 +20,5 @@ app.use("/", useRoutes);
 app.post("/", (req, res) => {
   console.log(req.body);
 });
-
-app.listen(3300);
+///////// ALTERAR PORTA ANTES DE START
+app.listen(PORT);
