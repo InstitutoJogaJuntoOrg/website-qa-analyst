@@ -134,7 +134,7 @@ export const Products = () => {
       formData.append("description", data.description);
       formData.append("shipment", data.shipment);
       axios
-        .post("http://52.67.101.208:3300/", formData, {
+        .post("http://apipf.jogajuntoinstituto.org/", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
             Authorization: jwt,

@@ -7,7 +7,7 @@ export const getProducts = async (
 ) => {
   try {
     const jwt = localStorage.getItem('jwt')
-    const res = await axios.get<ProductsType[]>("http://52.67.101.208:3300", { headers: {'Authorization': jwt}});
+    const res = await axios.get<ProductsType[]>("http://apipf.jogajuntoinstituto.org", { headers: {'Authorization': jwt}});
     setProducts(res.data);
   } catch (error) {
     console.log(error);
